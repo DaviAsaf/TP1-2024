@@ -1,0 +1,114 @@
+-> html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="page">
+      <header>
+        <div class="top_header">
+          <p class="top_texto"><img src="../imagens/icons8-gps-16.png">Concessionárias </p>
+        </div>
+        <div class="bottom_header">
+          <img class="logo_ford" src="../imagens/Sem título.png" alt="" />
+          <div class="navegador">
+            <a href="">Veículos</a>
+            <a href="">Ofertas</a>
+            <a href="">comprar</a>
+            <a href="">serviços</a>
+            <a href="">ford pro</a>
+            <a href="">iniciar sessão</a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="initial_body">
+            <img class="carro" src="../imagens/carro.avif" alt="">
+            <p class="titulo_ford">Nova Ranger Raptor</p>
+            <button class="botton_ford">Conheça</button>
+        </div>
+      </main>
+      <footer>
+
+      </footer>
+    </div>
+  </body>
+</html>
+  -> CSS
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    width: 100vw;
+    height:100vh;
+}
+
+#page{
+    width: 70vw;
+    height: 100vh;
+    border-left: 1px solid rgb(212, 212, 212);
+    border-right: 1px solid rgb(212, 212, 212);
+    margin: 0 auto 10px auto;
+}
+.top_header{
+    background-color: #f4f4f4;
+    padding: 9px;
+    padding-right: 7%;
+}
+.top_texto{
+    text-align: right;
+    font-size: 0.8em;
+}
+.logo_ford{
+    width: 7%;
+    padding: 10px 20px 5px 55px;
+}
+.bottom_header{
+    padding: 10px;
+}
+.navegador{
+    display: inline-block;
+    text-align: right;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 10px;
+}
+a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.8em;
+    padding: 0 0 0 30px; 
+    color: rgb(0, 0, 69);
+}
+a:hover{
+    color: blue;
+}
+.initial_body{
+
+}
+.carro{
+    width: 100%;
+}
+.titulo_ford{
+    position: relative;
+    bottom: 340px;
+    margin-left: 70px;
+    font-size: 2.8em;
+    color: white;
+}
+.botton_ford{
+    position: relative;
+    bottom: 330px;
+    margin-left: 70px;
+    padding: 15px 30px 15px 30px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background-color: white;
+    color: rgb(0, 0, 69);
+}
