@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>IMC</h1>
+    <p>Vamos calcular seu IMC</p>
+    <label for="">Altura em metros(m):</label>
+    <input type="text" id="altura">
+    <label for="">Peso em kilos(kg):</label>
+    <input type="text"id="peso">
+    <button onclick="calcular()">Calcular</button>
+    <p id="imc"></p>
+    <p id="class"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+calcular()
+    let altura = Number(document.getElementById("altura").value)
+    let peso = Number(document.getElementById("peso").value)
+    let imc = peso / (altura*altura)
+    document.getElementById("imc").innerText = `Seu IMC é: ${imc}`;
+    if (imc < 18.5) {
+        classificacao = "Abaixo do peso";
+    } else if (imc >= 18.5 && imc <= 24.9) {
+        classificacao = "Peso normal";
+    } else if (imc >= 25 && imc <= 29.9) {
+        classificacao = "Sobrepeso";
+    } else if (imc >= 30 && imc <= 34.9) {
+        classificacao = "Obesidade grau I (Moderada)";
+    } else if (imc >= 35 && imc <= 39.9) {
+        classificacao = "Obesidade grau II (Severa)";
+    } else if (imc >= 40) {
+        classificacao = "Obesidade grau III (Mórbita)";
+    } else {
+        classificacao = "Erro!";
+    }  
+    document.getElementById("class").innerText = `Classificação: ${classificacao}`;
